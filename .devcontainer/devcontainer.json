@@ -1,0 +1,25 @@
+{
+  "name": "Hugo",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "extensions": [
+    "bungcip.better-toml",
+    "davidanson.vscode-markdownlint"
+  ],
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "fish": {
+        "path": "/usr/bin/fish"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "fish"
+  },
+  "forwardPorts": [
+    1313
+  ],
+  "postAttachCommand": "/usr/bin/fish -c 'curl -sL https://git.io/fisher | source && fisher update'"
+}
